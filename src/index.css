@@ -17,10 +17,11 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
   vertical-align: baseline;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Playfair Display', serif;
 }
 html{
   scroll-behavior: smooth;
+  background-color: #E6E1C5;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 

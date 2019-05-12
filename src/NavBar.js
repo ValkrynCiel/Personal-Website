@@ -1,16 +1,18 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import colors from './Colors';
 
 const NavBarContainer = styled.div`
   position: fixed;
-  width: 100%;
+  width: 100vw;
   height: 50px;
   display: flex;
   align-items: center;
   justify-content: center
-  color: #5995DA;
-  background-color: #D6E9FE;
+  color: ${colors.lightGold};
+  background-color: ${colors.darkSeafoam};
   z-index: 1000;
+  box-shadow: 0 4px 3px rgba(30,60,30,.3)
 `
 const NavBarDiv = styled.div`
   width: 90%;
@@ -28,6 +30,10 @@ const MenuDiv = styled.div`
 
 const Link = styled.p`
   font-size: 18px;
+  &:hover {
+    color: ${colors.seafoam};
+    cursor: pointer;
+  }
 `
 
 class NavBar extends Component {

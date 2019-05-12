@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import colors from './Colors';
 
 const SkillDiv = styled.div`
-  width: 26%;
+  flex-basis: 26%;
   height: 0;
   padding-bottom: 26%;
   display: flex;
@@ -11,8 +12,19 @@ const SkillDiv = styled.div`
   margin-top: 7%;
   margin-bottom: 7%;
   border-radius: 10px;
-  border: 3px solid #00887A;
+  border: 3px solid ${colors.burntOrange};
   background-color: white;
+  box-shadow: 4px 4px 3px rgb(107,83,28, 0.4);
+
+  @media (min-width: 577px){
+    flex-basis: 20%;
+    padding-bottom 20%;
+  }
+
+  @media (min-width: 800px){
+    flex-basis: 14%;
+    padding-bottom: 14%;
+  }
 `
 const IconContainer = styled.div`
   width: 65%;
@@ -34,19 +46,19 @@ const Name = styled.div`
   height: 20%;
   width: 100%;
   bottom: -1px;
-  font-size: 4.5vmin;
   text-align: center;
   position: absolute;
   display: flex;
   align-items: center;
-  background-color: #00887A;
-  border: 2px solid #00887A;
+  background-color: ${colors.burntOrange};
+  border: 2px solid ${colors.burntOrange};
   border-radius: 0px 0px 5px 5px;
   p {
     color: white;
     line-height: 100%;
     width: 100%;
     display: inline-block;
+    font-size: 1rem;
   }
 `
 

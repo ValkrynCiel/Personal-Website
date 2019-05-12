@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import imgSrc from './photo.jpg';
+import colors from './Colors';
 
 const HeaderDiv = styled.div`
   width: 100%;
@@ -9,9 +10,21 @@ const HeaderDiv = styled.div`
   align-items: center;
   justify-content: space-around;
   flex-direction: column;
-  background-color: #77A6F7;
+  background-color: ${colors.warmGold};
   position: relative;
+  margin: auto;
   margin-top: 50px;
+  max-width: 900px;
+`
+const ImageBorderDiv = styled.div`
+  margin-top: 50px;
+  height: 210px;
+  width: 210px;
+  border-radius: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed ${colors.burntOrange};
 `
 
 const ImageContainer = styled.div`
@@ -21,15 +34,15 @@ const ImageContainer = styled.div`
   background-color: white;
   overflow: hidden;
   position: relative;
-  margin-top: 50px;
   img {
     position: absolute;
     top: -13px;
     left: -47px;
-    width: 140%; /* or any custom size */
+    width: 140%; 
     height: 140%; 
     object-fit: contain;
   }
+
 `
 const GreetingContainer = styled.div`
   width: 80%;
@@ -38,12 +51,16 @@ const GreetingContainer = styled.div`
   align-items: center;
   justify-content: space-around;
   flex-direction: column;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 `
 const MainGreeting = styled.div`
   text-align: center;
-  font-size: 40px;
-  color: #D3E3FC;
+    font-size: 250%
+  color: ${colors.burntOrange};
+
+  @media (min-width: 900px){
+    font-size: 320%;
+  }
 `
 
 // const MinorGreeting = styled.div`
@@ -58,19 +75,24 @@ const DownButton = styled.div`
   border-radius: 30px;
   position: absolute;
   bottom: -30px;
-  background-color: #00887A
+  background-color: ${colors.seafoam}
   display: flex;
   justify-content: center;
   align-items: bottom;
-  &:hover {
-    background-color: red
-    cursor: pointer
-  }
+
   span {
     font-size: 60px;
-    color: #D3E3FC;
+    color: ${colors.darkSeafoam};
     position: relative;
     top: 3px;
+  }
+
+  &:hover {
+    background-color: ${colors.darkSeafoam}
+    cursor: pointer
+    span {
+      color: ${colors.seafoam}
+    }
   }
 `
 
@@ -78,9 +100,11 @@ class Header extends Component {
   render() {
     return(
       <HeaderDiv>
-        <div><ImageContainer><img src={imgSrc} alt="me"/></ImageContainer></div>
+        <ImageBorderDiv>
+          <ImageContainer><img src={imgSrc} alt="me"/></ImageContainer>
+        </ImageBorderDiv>
         <GreetingContainer>
-          <MainGreeting>Hello! I'm Ethan</MainGreeting>
+          <MainGreeting>Hi! I'm Ethan :)</MainGreeting>
           {/* <MinorGreeting>I build front-end applications</MinorGreeting> */}
         </GreetingContainer>
         <DownButton onClick={this.props.handleScroll}><span className="fas fa-angle-down"></span></DownButton>

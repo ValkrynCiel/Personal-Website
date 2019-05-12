@@ -3,6 +3,7 @@ import NavBar from './NavBar';
 import Header from './Header';
 import AboutPage from './AboutPage';
 import SkillsPage from './SkillsPage';
+import ProjectsPage from './ProjectsPage';
 import styled from 'styled-components';
 
 const AppWrapper = styled.div`
@@ -25,11 +26,13 @@ const AnchorDiv = styled.div`
 `
 const SectionDiv = styled.div`
   width: 100%;
-  border: 1px solid red;
+  // border: 1px solid red;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  max-width: 900px;
+  margin: auto;
 `
 
 class App extends Component {
@@ -79,13 +82,13 @@ class App extends Component {
           <AnchorDiv ref={this.skillsRef}/>
         </SeparatorDiv>
         <SectionDiv>
-          <SkillsPage></SkillsPage>
+          <SkillsPage/>
         </SectionDiv>
         <SeparatorDiv>
           <AnchorDiv ref={this.projectsRef}/>
         </SeparatorDiv>
         <SectionDiv>
-          Projects
+          <ProjectsPage/>
         </SectionDiv>
       </AppWrapper>
     );
