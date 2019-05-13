@@ -14,7 +14,6 @@ const HeaderDiv = styled.div`
   position: relative;
   margin: auto;
   margin-top: 50px;
-  max-width: 900px;
 `
 const ImageBorderDiv = styled.div`
   margin-top: 50px;

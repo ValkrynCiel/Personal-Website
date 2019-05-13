@@ -18,21 +18,44 @@ const NavBarDiv = styled.div`
   width: 90%;
   height: 40px;
   display: flex;
-  justify-content: space-between;
+  
 `
 
 const MenuDiv = styled.div`
   display: flex;
-  justify-content: space-between;
+  margin: auto;
+  justify-content: space-around;
   align-items: center;
-  width: ${ props => props.name ? "auto" : "250px" };
+  width: 100%;
+
+  @media (min-width: 500px) {
+    max-width: 500px;
+  }
+
+  @media (min-width: 800px) {
+  max-width: 700px;
+  }
+
+  @media (min-width: 1080px) {
+    max-width: 900px;
+  }
 `
 
-const Link = styled.p`
+const Link = styled.div`
   font-size: 18px;
+  flex-basis: 20%;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  border-bottom: 2px solid transparent;
   &:hover {
     color: ${colors.seafoam};
     cursor: pointer;
+    border-bottom: 2px dashed ${colors.seafoam};
+  }
+  p {
+    margin: auto;
   }
 `
 
@@ -42,14 +65,14 @@ class NavBar extends Component {
     return (
       <NavBarContainer>
         <NavBarDiv>
-            <MenuDiv name>
+            {/* <MenuDiv name>
               <Link onClick={this.props.handleHomeScroll}>E</Link>
-            </MenuDiv>
+            </MenuDiv> */}
           <MenuDiv>
             <Link onClick={this.props.handleAboutScroll}>About</Link>
             <Link onClick={this.props.handleSkillsScroll}>Skills</Link>
             <Link onClick={this.props.handleProjectsScroll}>Projects</Link>
-            <Link>Contact</Link>
+            <Link onClick={this.props.handleContactScroll}>Contact</Link>
           </MenuDiv>
         </NavBarDiv>
       </NavBarContainer>

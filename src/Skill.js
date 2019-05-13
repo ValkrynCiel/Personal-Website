@@ -58,7 +58,13 @@ const Name = styled.div`
     line-height: 100%;
     width: 100%;
     display: inline-block;
-    font-size: 1rem;
+    font-size: 18px;
+  }
+
+  @media (max-width: 400px){
+    p {
+      font-size: 14px;
+    }
   }
 `
 

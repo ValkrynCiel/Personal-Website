@@ -4,6 +4,7 @@ import Header from './Header';
 import AboutPage from './AboutPage';
 import SkillsPage from './SkillsPage';
 import ProjectsPage from './ProjectsPage';
+import Footer from './Footer';
 import styled from 'styled-components';
 
 const AppWrapper = styled.div`
@@ -41,9 +42,11 @@ class App extends Component {
     this.aboutRef = React.createRef();
     this.skillsRef = React.createRef();
     this.projectsRef = React.createRef();
+    this.contactRef = React.createRef();
     this.scrollToAboutRef = this.scrollToAboutRef.bind(this);
     this.scrollToSkillsRef = this.scrollToSkillsRef.bind(this);
     this.scrollToProjectsRef = this.scrollToProjectsRef.bind(this);
+    this.scrollToContactRef = this.scrollToContactRef.bind(this);
     this.scrollHome = this.scrollHome.bind(this);
   }
 
@@ -63,6 +66,10 @@ class App extends Component {
     window.scrollTo(0, this.projectsRef.current.offsetTop-50);
   }
 
+  scrollToContactRef() {
+    window.scrollTo(0, this.contactRef.current.offsetTop-50);
+  }
+
   render() {
     return (
       <AppWrapper>
@@ -70,6 +77,7 @@ class App extends Component {
           handleAboutScroll={this.scrollToAboutRef}
           handleSkillsScroll={this.scrollToSkillsRef}
           handleProjectsScroll={this.scrollToProjectsRef}
+          handleContactScroll={this.scrollToContactRef}
           handleHomeScroll={this.scrollHome}/>
         <Header handleScroll={this.scrollToAboutRef} />
         <SeparatorDiv>
@@ -90,6 +98,8 @@ class App extends Component {
         <SectionDiv>
           <ProjectsPage/>
         </SectionDiv>
+        <Footer/>
+        <div ref={this.contactRef}></div>
       </AppWrapper>
     );
   }

@@ -45,7 +45,7 @@ const TitleDiv = styled.div`
   border-radius: 10px;
   box-shadow: 4px 4px 3px rgb(107,83,28, 0.4);
 
-  @media (min-width: 700px){
+  @media (min-width: 600px){
     font-size: 4rem;
     top: -3.5rem
   }
