@@ -55,21 +55,21 @@ class ProjectsPage extends Component {
         <TitleDiv>Projects</TitleDiv>
         <ProjectsDiv>
           <Project title='The Relish CMS' src={relishSrc} alt='relish'>
-          A GUI that allows admins to create, edit, delete, and reorder sports channels to be viewed in iOS mobile applications.<br/>
+          As part of my internship The Relish, I built a GUI for admins to create, edit, delete, and reorder sports channels to be viewed in iOS mobile applications. I also improved the response speed of several pages that patched data in Firebase by 70% by connecting key components to Redux store. The codebase made use of Redux-thunk, React-beautiful-dnd, and Material-ui.<br/>
           <span>
-          <b>Technologies:</b> React-beautiful-dnd, Firebase
+          <b>Technologies:</b> React, Firebase, Redux
           </span>
           </Project>
+          <Project title='Microblog' src={microblogSrc} alt='microblog'>A frontend blogging app in which users can post, edit, and delete stories. Stories can be upvoted and downvoted.<br/>
+          <span>
+          <b>Technologies:</b>  React, Redux, Node.js, Bootstrap
+          </span></Project>
           <Project title='Orbs' src={ballSrc} alt='ball'>
           The beginnings of a physics simulator in which users can create orbs of different colors that bounce indefinitely.<br/>
           <span>
           <b>Technologies:</b>  vanilla Javascript and canvas
           </span>
           </Project>
-          <Project title='Microblog' src={microblogSrc} alt='microblog'>A frontend blogging app in which users can post, edit, and delete stories. Stories can be upvoted and downvoted.<br/>
-          <span>
-          <b>Technologies:</b>  React, Redux, Bootstrap
-          </span></Project>
         </ProjectsDiv>
       </ProjectsWrapper>
     )

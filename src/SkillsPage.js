@@ -55,7 +55,7 @@ class SkillsPage extends Component {
 
   render() {
     const skillOrder = [
-      javascriptInfo, pythonInfo, reactInfo, reduxInfo, firebaseInfo, nodeInfo, flaskInfo, jqueryInfo, postgresqlInfo, htmlInfo, cssInfo, bootstrapInfo
+      javascriptInfo, reactInfo, reduxInfo, nodeInfo,firebaseInfo, jqueryInfo,   pythonInfo,flaskInfo, postgresqlInfo,htmlInfo, cssInfo, bootstrapInfo, 
     ];
     return (
       <SkillsWrapper>

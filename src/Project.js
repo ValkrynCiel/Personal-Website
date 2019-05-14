@@ -22,6 +22,7 @@ const TitleDiv = styled.div`
     font-size: 40px;
   }
 `
+
 const DescriptionDiv = styled.div`
   width: 90%
   margin: auto;
@@ -33,11 +34,17 @@ const DescriptionDiv = styled.div`
     font-size: 22px;
   }
 `
-const Image = styled.img`
-  max-width: 85%;
-  margin: auto;
+const ImageContainer = styled.div`
+  width: 85%;
   border-radius: 15px;
+  margin: auto;
   border: 2px solid ${colors.darkSeafoam}
+  overflow: hidden;
+`
+const Image = styled.img`
+  width: 100%;
+  height: auto;
+  display: block;
 `
 
 class Project extends Component {
@@ -45,7 +52,9 @@ class Project extends Component {
     return(
       <ProjectWrapper>
         <TitleDiv>{this.props.title}</TitleDiv>
-        <Image src={this.props.src} alt={this.props.alt}/>
+        <ImageContainer>
+          <Image src={this.props.src} alt={this.props.alt}/>
+        </ImageContainer>
         <DescriptionDiv>{this.props.children}</DescriptionDiv>
       </ProjectWrapper>
     )

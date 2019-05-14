@@ -29,6 +29,7 @@ const ContactLink = styled.div`
   }
 
   .fa-github {
+    top: -1px;
     left: -.5px;
     font-size: 63px;
     position: relative;
