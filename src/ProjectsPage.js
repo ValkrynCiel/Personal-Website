@@ -12,6 +12,14 @@ const ProjectsWrapper = styled.div`
   display: flex;
   background-color: ${colors.warmGold}
   position: relative;
+
+  span {
+    display: inline-block;
+    margin-top: 10px;
+  }
+  b {
+    font-weight:700;
+  }
 `
 const ProjectsDiv = styled.div`
   width: 100%;
@@ -47,12 +55,21 @@ class ProjectsPage extends Component {
         <TitleDiv>Projects</TitleDiv>
         <ProjectsDiv>
           <Project title='The Relish CMS' src={relishSrc} alt='relish'>
-          Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum
+          A GUI that allows admins to create, edit, delete, and reorder sports channels to be viewed in iOS mobile applications.<br/>
+          <span>
+          <b>Technologies:</b> React-beautiful-dnd, Firebase
+          </span>
           </Project>
           <Project title='Orbs' src={ballSrc} alt='ball'>
-          Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum
+          The beginnings of a physics simulator in which users can create orbs of different colors that bounce indefinitely.<br/>
+          <span>
+          <b>Technologies:</b>  vanilla Javascript and canvas
+          </span>
           </Project>
-          <Project title='Microblog' src={microblogSrc} alt='microblog'>Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum</Project>
+          <Project title='Microblog' src={microblogSrc} alt='microblog'>A frontend blogging app in which users can post, edit, and delete stories. Stories can be upvoted and downvoted.<br/>
+          <span>
+          <b>Technologies:</b>  React, Redux, Bootstrap
+          </span></Project>
         </ProjectsDiv>
       </ProjectsWrapper>
     )

@@ -35,10 +35,10 @@ const ImageContainer = styled.div`
   position: relative;
   img {
     position: absolute;
-    top: -13px;
-    left: -47px;
-    width: 140%; 
-    height: 140%; 
+    top: -17px;
+    left: -56px;
+    width: 150%; 
+    height: 150%; 
     object-fit: contain;
   }
 

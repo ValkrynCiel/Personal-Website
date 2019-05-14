@@ -22,11 +22,16 @@ const ContactLink = styled.div`
   }
   i {
     margin: auto
-    display: block
+    display: inline-block;
+    &:vistied {
+      color: ${colors.lightGold};
+    }
   }
 
   .fa-github {
-    font-size: 50px;
+    left: -.5px;
+    font-size: 63px;
+    position: relative;
   }
 
   .fa-linkedin-in {
