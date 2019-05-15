@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import colors from './Colors'
+import ProjectLinkContainer from './ProjectLinkContainer';
 
 
 const ProjectWrapper = styled.div`
@@ -10,16 +11,20 @@ const ProjectWrapper = styled.div`
   // border: 3px solid ${colors.burntOrange};
   flex-direction: column;
   margin-top: 50px;
-  
 `
 
 const TitleDiv = styled.div`
   width: 90%
   margin: 20px auto;
-  font-size: 30px;
+  font-size: 40px;
   color: ${colors.burntOrange}
-  @media (min-width: 600px) {
-    font-size: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @media (max-width: 600px) {
+    font-size: 35px;
+    jusify-content: space-around;
+    flex-direction: column;
   }
 `
 
@@ -40,6 +45,7 @@ const ImageContainer = styled.div`
   margin: auto;
   border: 2px solid ${colors.darkSeafoam}
   overflow: hidden;
+  position: relative;
 `
 const Image = styled.img`
   width: 100%;
@@ -51,7 +57,7 @@ class Project extends Component {
   render() {
     return(
       <ProjectWrapper>
-        <TitleDiv>{this.props.title}</TitleDiv>
+        <TitleDiv><p>{this.props.title}</p> <ProjectLinkContainer/></TitleDiv>
         <ImageContainer>
           <Image src={this.props.src} alt={this.props.alt}/>
         </ImageContainer>
