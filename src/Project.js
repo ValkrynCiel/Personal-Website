@@ -42,7 +42,7 @@ const ImageContainer = styled.div`
   width: 85%;
   border-radius: 15px;
   margin: auto;
-  border: 2px solid ${colors.darkSeafoam}
+  border: 4px inset ${colors.darkSeafoam}
   overflow: hidden;
   position: relative;
 `
