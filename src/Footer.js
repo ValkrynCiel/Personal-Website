@@ -34,6 +34,9 @@ const ContactContainer = styled.div`
 
   a {
     text-decoration: none;
+    &:link {
+      color: ${colors.lightGold}
+    }
     &:visited {
       color: ${colors.lightGold}
     }
