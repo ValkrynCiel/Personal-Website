@@ -70,7 +70,8 @@ const projects = {
     src: joblySrc,
     alt: 'Front page of Jobly',
     links: [
-      ['github', 'https://github.com/ValkrynCiel/jobly-react-frontend']
+      ['github', 'https://github.com/ValkrynCiel/jobly-react-frontend'],
+      ['link', 'https://jobly-welcome.herokuapp.com/']
     ]
   },
   orbs: {
