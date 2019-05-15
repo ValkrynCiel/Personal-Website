@@ -6,6 +6,7 @@ import Project from './Project';
 import orbSrc from './Icons/Orbs.png';
 import relishSrc from './Icons/Relish.png';
 import microblogSrc from './Icons/Microblog.png';
+import joblySrc from './Icons/Jobly.png';
 
 const ProjectsWrapper = styled.div`
   width: 100%;
@@ -64,6 +65,14 @@ const projects = {
       ['link', 'http://microblog-less.herokuapp.com/']
     ]
   },
+  jobly: {
+    title: 'Jobly',
+    src: joblySrc,
+    alt: 'Front page of Jobly',
+    links: [
+      ['github', 'https://github.com/ValkrynCiel/jobly-react-frontend']
+    ]
+  },
   orbs: {
     title: 'Orbs',
     src: orbSrc,
@@ -87,10 +96,16 @@ class ProjectsPage extends Component {
           <b>Technologies:</b> React, Firebase, Redux
           </span>
           </Project>
-          <Project details={projects.microblog}>A frontend blogging app in which users can post, edit, and delete stories. Stories can be upvoted and downvoted.<br/>
+          <Project details={projects.microblog}>A blogging app in which users can post, edit, and delete stories. Stories can be upvoted or downvoted and are ordered accordingly on the homepage.<br/>
           <span>
           <b>Technologies:</b>  React, Redux, Node.js, Bootstrap
           </span></Project>
+          <Project details={projects.jobly}>
+          A job search app in which users can search jobs, look up companies, and edit personal information. User authorization was implemented with middleware in a backend built with Node.js.<br/>
+          <span>
+          <b>Technologies:</b> React, Node.js, Bootstrap
+          </span>
+          </Project>
           <Project details={projects.orbs}>
           The beginnings of a physics simulator in which users can create orbs of different colors that bounce indefinitely.<br/>
           <span>
