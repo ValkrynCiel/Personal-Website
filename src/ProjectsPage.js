@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import colors from './Colors';
 import Project from './Project';
 
-import ballSrc from './Icons/Test.png';
+import orbSrc from './Icons/Orbs.png';
 import relishSrc from './Icons/Relish.png';
 import microblogSrc from './Icons/Microblog.png';
 
@@ -48,23 +48,50 @@ const TitleDiv = styled.div`
   }
 `
 
+const projects = {
+  relish: {
+    title: 'The Relish CMS',
+    src: relishSrc,
+    alt: 'Drag and Drop containers built with React',
+    links: []
+  },
+  microblog: {
+    title: 'Microblog',
+    src: microblogSrc,
+    alt: 'Front page of Microblog',
+    links: [
+      ['github', 'https://github.com/ValkrynCiel/redux-microblog'],
+      ['link', 'http://microblog-less.herokuapp.com/']
+    ]
+  },
+  orbs: {
+    title: 'Orbs',
+    src: orbSrc,
+    alt: 'Colorful orbs bouncing',
+    links: [
+      ['github', 'https://github.com/ValkrynCiel/Orbs'],
+      ['link', 'https://valkrynciel.github.io/Orbs/']
+    ]
+  }
+}
+
 class ProjectsPage extends Component {
   render() {
     return(
       <ProjectsWrapper>
         <TitleDiv>Projects</TitleDiv>
         <ProjectsDiv>
-          <Project title='The Relish CMS' src={relishSrc} alt='relish'>
+          <Project details={projects.relish}>
           As part of my internship The Relish, I built a GUI for admins to create, edit, delete, and reorder sports channels to be viewed in iOS mobile applications. I also improved the response speed of several pages that patched data in Firebase by 70% by connecting key components to Redux store. The codebase made use of Redux-thunk, React-beautiful-dnd, and Material-ui.<br/>
           <span>
           <b>Technologies:</b> React, Firebase, Redux
           </span>
           </Project>
-          <Project title='Microblog' src={microblogSrc} alt='microblog'>A frontend blogging app in which users can post, edit, and delete stories. Stories can be upvoted and downvoted.<br/>
+          <Project details={projects.microblog}>A frontend blogging app in which users can post, edit, and delete stories. Stories can be upvoted and downvoted.<br/>
           <span>
           <b>Technologies:</b>  React, Redux, Node.js, Bootstrap
           </span></Project>
-          <Project title='Orbs' src={ballSrc} alt='ball'>
+          <Project details={projects.orbs}>
           The beginnings of a physics simulator in which users can create orbs of different colors that bounce indefinitely.<br/>
           <span>
           <b>Technologies:</b>  vanilla Javascript and canvas

@@ -3,15 +3,17 @@ import styled from 'styled-components';
 import colors from './Colors';
 
 const LinkWrapper = styled.div`
-  width: 120px;
+  width: ${props => props.length > 1 ? '120px': 'auto'}
   display: flex;
   justify-content: space-between;
   margin: auto;
   margin-right: 30px;
+  
   @media (max-width: 600px) {
     margin-top: 10px;
     margin-right: auto;
-    width: 150px;
+    width: ${props => props.length > 1 ? '150px': 'auto'};
+    justify-content: space-between;
   }
 `
 
@@ -22,6 +24,9 @@ const ProjectLink = styled.div`
   background-color: ${colors.seafoam}
   display: flex;
   align-items: center;
+  &:hover {
+    cursor: pointer;
+  }
   i {
     color: ${colors.darkSeafoam}
     margin: auto;
@@ -51,13 +56,11 @@ const ProjectLink = styled.div`
 class ProjectLinkContainer extends Component {
   render() {
     return(
-      <LinkWrapper>
-        <ProjectLink>
-          <i className="fab fa-github"></i>
-        </ProjectLink>
-        <ProjectLink>
-          <i className="fas fa-link"></i>
-        </ProjectLink>
+      <LinkWrapper length={this.props.links.length}>
+        {this.props.links.map(([icon, url]) => (
+          <ProjectLink key={url} onClick={()=> window.open(url, "_blank")}>
+            <i className={icon === 'link' ? 'fas fa-link' : 'fab fa-github'}></i>
+          </ProjectLink>))}
       </LinkWrapper>
     )
   }

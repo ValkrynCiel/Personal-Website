@@ -8,7 +8,6 @@ const ProjectWrapper = styled.div`
   flex-basis: 90%;
   display: flex;
   border-radius: 10px;
-  // border: 3px solid ${colors.burntOrange};
   flex-direction: column;
   margin-top: 50px;
 `
@@ -55,11 +54,15 @@ const Image = styled.img`
 
 class Project extends Component {
   render() {
+    const { title, src, alt, links} = this.props.details;
     return(
       <ProjectWrapper>
-        <TitleDiv><p>{this.props.title}</p> <ProjectLinkContainer/></TitleDiv>
+        <TitleDiv>
+          <p>{title}</p>
+          <ProjectLinkContainer links={links}/>
+        </TitleDiv>
         <ImageContainer>
-          <Image src={this.props.src} alt={this.props.alt}/>
+          <Image src={src} alt={alt}/>
         </ImageContainer>
         <DescriptionDiv>{this.props.children}</DescriptionDiv>
       </ProjectWrapper>
