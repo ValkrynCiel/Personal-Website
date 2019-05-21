@@ -63,7 +63,7 @@ class Footer extends Component {
         <ContactContainer>
           <h1>Contact</h1>
           <DetailContainer>
-          <p><a href={resume} rel="noreferrer noopener" target="_blank">Link to resume <i className="fas fa-external-link-alt"></i></a></p>
+          <p><a href="https://docs.google.com/document/d/1uxHXNxhfK9JUavrTAhPQs3StOOmwGHni0cfZof3EKSU/export?format=pdf" rel="noreferrer noopener" target="_blank">Link to resume <i className="fas fa-external-link-alt"></i></a></p>
           <p>email: ethanshen.wu@gmail.com</p>
           <ContactLinkContainer/>
           </DetailContainer>

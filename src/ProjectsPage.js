@@ -108,9 +108,9 @@ class ProjectsPage extends Component {
           </span>
           </Project>
           <Project details={projects.orbs}>
-          The beginnings of a physics simulator in which users can create orbs of different colors that bounce indefinitely.<br/>
+          A physics simulator in which users can create orbs of different colors and sizes that bounce indefinitely.<br/>
           <span>
-          <b>Technologies:</b>  vanilla Javascript and canvas
+          <b>Technologies:</b>  vanilla Javascript, JS canvas
           </span>
           </Project>
         </ProjectsDiv>
