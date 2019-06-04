@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import colors from './Colors';
 import Project from './Project';
 
-import orbSrc from './Icons/Orbs.png';
+import mineSrc from './Icons/minesweeper.png';
 import relishSrc from './Icons/Relish.png';
 import microblogSrc from './Icons/Microblog.png';
 import joblySrc from './Icons/Jobly.png';
@@ -74,13 +74,13 @@ const projects = {
       ['link', 'https://jobly-welcome.herokuapp.com/']
     ]
   },
-  orbs: {
-    title: 'Orbs',
-    src: orbSrc,
-    alt: 'Colorful orbs bouncing',
+  minesweeper: {
+    title: 'Minesweeper',
+    src: mineSrc,
+    alt: 'game of minesweeper in progress',
     links: [
-      ['github', 'https://github.com/ValkrynCiel/Orbs'],
-      ['link', 'https://valkrynciel.github.io/Orbs/']
+      ['github', 'https://github.com/ValkrynCiel/minesweeper'],
+      ['link', 'https://valkrynciel.github.io/minesweeper/']
     ]
   }
 }
@@ -97,6 +97,12 @@ class ProjectsPage extends Component {
           <b>Technologies:</b> React, Firebase, Redux
           </span>
           </Project>
+          <Project details={projects.minesweeper}>
+          Classic game with a retro style. Players win by clearing all cells without mines in them. Flags can be used to mark mines.<br/>
+          <span>
+          <b>Technologies:</b>  React, styled components
+          </span>
+          </Project>
           <Project details={projects.microblog}>A blogging app in which users can post, edit, and delete stories. Stories can be upvoted or downvoted and are ordered accordingly on the homepage.<br/>
           <span>
           <b>Technologies:</b>  React, Redux, Node.js, Bootstrap
@@ -105,12 +111,6 @@ class ProjectsPage extends Component {
           A job search app in which users can search jobs, look up companies, and edit personal information. User authorization was implemented with middleware in a backend built with Node.js.<br/>
           <span>
           <b>Technologies:</b> React, Node.js, Bootstrap
-          </span>
-          </Project>
-          <Project details={projects.orbs}>
-          A physics simulator in which users can create orbs of different colors and sizes that bounce indefinitely.<br/>
-          <span>
-          <b>Technologies:</b>  vanilla Javascript, JS canvas
           </span>
           </Project>
         </ProjectsDiv>
