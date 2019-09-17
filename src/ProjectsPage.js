@@ -6,7 +6,7 @@ import Project from './Project';
 import mineSrc from './Icons/minesweeper.png';
 import relishSrc from './Icons/Relish.png';
 import microblogSrc from './Icons/Microblog.png';
-import joblySrc from './Icons/Jobly.png';
+import boardSrc from './Icons/Hunty Board.png';
 
 const ProjectsWrapper = styled.div`
   width: 100%;
@@ -65,13 +65,13 @@ const projects = {
       ['link', 'http://microblog-less.herokuapp.com/']
     ]
   },
-  jobly: {
-    title: 'Jobly',
-    src: joblySrc,
-    alt: 'Front page of Jobly',
+  board: {
+    title: 'Hunty Board',
+    src: boardSrc,
+    alt: 'Hunty Board GUI',
     links: [
-      ['github', 'https://github.com/ValkrynCiel/jobly-react-frontend'],
-      ['link', 'https://jobly-welcome.herokuapp.com/']
+      ['github', 'https://https://github.com/ValkrynCiel/jQuery_huntr_board'],
+      ['link', 'https://valkrynciel.github.io/jQuery_huntr_board/']
     ]
   },
   minesweeper: {
@@ -97,6 +97,12 @@ class ProjectsPage extends Component {
           <b>Technologies:</b> React, Firebase, Redux
           </span>
           </Project>
+          <Project details={projects.board}>
+          A Huntr Board clone. Users can add new jobs, edit job information, and delete jobs as well as sort them between columns. Columns can be dragged and sorted. Column titles can be added and edited to suit individual needs. <br/>
+          <span>
+          <b>Technologies:</b> jQuery UI, HTML5, CSS3
+          </span>
+          </Project>
           <Project details={projects.minesweeper}>
           Classic game with a retro style. Players win by clearing all cells without mines in them. Flags can be used to mark mines.<br/>
           <span>
@@ -107,12 +113,6 @@ class ProjectsPage extends Component {
           <span>
           <b>Technologies:</b>  React, Redux, Node.js, Bootstrap
           </span></Project>
-          <Project details={projects.jobly}>
-          A job search app in which users can search jobs, look up companies, and edit personal information. User authorization was implemented with middleware in a backend built with Node.js.<br/>
-          <span>
-          <b>Technologies:</b> React, Node.js, Bootstrap
-          </span>
-          </Project>
         </ProjectsDiv>
       </ProjectsWrapper>
     )
