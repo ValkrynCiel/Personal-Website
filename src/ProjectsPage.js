@@ -70,7 +70,7 @@ const projects = {
     src: boardSrc,
     alt: 'Hunty Board GUI',
     links: [
-      ['github', 'https://https://github.com/ValkrynCiel/jQuery_huntr_board'],
+      ['github', 'https://github.com/ValkrynCiel/jQuery_huntr_board'],
       ['link', 'https://valkrynciel.github.io/jQuery_huntr_board/']
     ]
   },
